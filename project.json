@@ -1,7 +1,7 @@
 {
-  "name": "test_rpa_project",
+  "name": "Project_RPA",
   "description": "Blank Process",
-  "main": "Main.xaml",
+  "main": "RPA_project.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.7.2]",
     "UiPath.Mail.Activities": "[1.7.2]",
@@ -29,7 +29,8 @@
     "libraryOptions": {
       "includeOriginalXaml": false,
       "privateWorkflows": []
-    }
+    },
+    "fileInfos": []
   },
   "expressionLanguage": "VisualBasic"
 }
