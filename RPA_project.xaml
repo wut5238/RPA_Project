@@ -64,7 +64,7 @@
         <OutArgument x:TypeArguments="x:String">[username]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="483.2,92.8" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Please Enter Your Password" Title="Password">
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="483.2,92.8" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="True" Label="Please Enter Your Password" Title="Password">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[pwd]</OutArgument>
       </ui:InputDialog.Result>
