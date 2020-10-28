@@ -69,12 +69,12 @@
         <OutArgument x:TypeArguments="x:String">[pwd]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <If Condition="[username.Contains(&quot;gmail&quot;)]" sap:VirtualizedContainerService.HintSize="483.2,209.6" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[username.Contains(&quot;@hotmail.com&quot;) or username.Contains(&quot;@outlook.com&quot;)]" sap:VirtualizedContainerService.HintSize="483.2,209.6" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <ui:GetIMAPMailMessages TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[username]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_2" MailFolder="Inbox" MarkAsRead="False" Messages="[mail]" OnlyUnreadMessages="False" Password="[pwd]" Port="[convert.ToInt32(gmail(1))]" SecureConnection="Auto" Server="[gmail(0)]" Top="5" />
+        <ui:GetIMAPMailMessages TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[username]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_3" MailFolder="Inbox" MarkAsRead="False" Messages="[mail]" OnlyUnreadMessages="False" Password="[pwd]" Port="[Convert.ToInt32(outlook(1))]" SecureConnection="Auto" Server="[outlook(0)]" Top="5" />
       </If.Then>
       <If.Else>
-        <ui:GetIMAPMailMessages TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[username]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_3" MailFolder="Inbox" MarkAsRead="False" Messages="[mail]" OnlyUnreadMessages="False" Password="[pwd]" Port="[Convert.ToInt32(outlook(1))]" SecureConnection="Auto" Server="[outlook(0)]" Top="5" />
+        <ui:GetIMAPMailMessages TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[username]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_2" MailFolder="Inbox" MarkAsRead="False" Messages="[mail]" OnlyUnreadMessages="False" Password="[pwd]" Port="[convert.ToInt32(gmail(1))]" SecureConnection="Auto" Server="[gmail(0)]" Top="5" />
       </If.Else>
     </If>
     <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="483.2,289.6" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[mail]">
