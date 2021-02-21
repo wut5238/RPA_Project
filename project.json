@@ -1,7 +1,7 @@
 {
-  "name": "Project_RPA",
+  "name": "RPA_Project",
   "description": "Blank Process",
-  "main": "RPA_project.xaml",
+  "main": "Product Sale Summary Automation_61070254_61070343.xaml",
   "dependencies": {
     "UiPath.Credentials.Activities": "[1.1.6479.13204]",
     "UiPath.Excel.Activities": "[2.7.2]",
